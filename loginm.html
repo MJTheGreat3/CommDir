@@ -1,0 +1,17 @@
+{% extends "layoutn.html" %} 
+ 
+{% block title %} 
+    Member Log In 
+{% endblock %} 
+ 
+{% block main %} 
+    <form action="/login" method="post"> 
+        <div class="form-group"> 
+            <input autocomplete="off" autofocus class="form-control" name="regnno" placeholder="Registration No." type="number" min="0" max="200" /> 
+        </div> 
+        <div class="form-group"> 
+            <input autocomplete="off" class="form-control" name="password" placeholder="Password" type="password"/> 
+        </div> 
+        <button class="btn btn-primary" type="submit">Log In</button> 
+    </form> 
+{% endblock %} 
