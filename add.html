@@ -1,0 +1,80 @@
+{% extends "layouta.html" %} 
+ 
+{% block title %} 
+    Register 
+{% endblock %} 
+ 
+{% block main %} 
+    <form action="/add/{{ rows[0]['RegnNo'] }}/{{ rows[0]['FamilyName'] }}/{{ rows[0]['NativeDiocese'] }}/{{ rows[0]['NativeParish'] }}/{{ rows[0]['Unit'] }}/{{ rows[0]['MumbaiAddress'] }}/{{ rows[0]['KeralaAddress'] }}/{{ rows[0]['Password'] }}" method="post"> 
+        <div class="form-group"> 
+            <label for="mid">MemberID</label> 
+            <select class="custom-select" id="mid" name="mid"> 
+                <option value="B" selected>B</option> 
+                <option value="C">C</option> 
+                <option value="D">D</option> 
+                <option value="E">E</option> 
+                <option value="F">F</option> 
+                <option value="G">G</option> 
+                <option value="H">H</option> 
+                <option value="I">I</option> 
+                <option value="J">J</option> 
+                <option value="K">K</option> 
+                <option value="L">L</option> 
+                <option value="M">M</option> 
+                <option value="N">N</option> 
+                <option value="O">O</option> 
+                <option value="P">P</option> 
+                <option value="Q">Q</option> 
+                <option value="R">R</option> 
+                <option value="S">S</option> 
+                <option value="T">T</option> 
+                <option value="U">U</option> 
+            </select> 
+        </div> 
+        <div class="form-row"> 
+            <div class="form-group col-md-6"> 
+                <label for="fname">First Name</label> 
+                <input autocomplete="off" type="text" class="form-control" id="fname" name="fname"> 
+            </div> 
+            <div class="form-group col-md-6"> 
+                <label for="lname">Last Name</label> 
+                <input autocomplete="off" type="text" class="form-control" id="lname" name="lname"> 
+            </div> 
+        </div> 
+        <div class="form-group"> 
+            <label for="rel">Relation</label> 
+            <input autocomplete="off" type="text" class="form-control" id="rel" name="rel"> 
+        </div> 
+        <div class="form-row"> 
+            <label for="dob">Date of Birth</label> 
+            <input autocomplete="off" type="number" min="1" max="31" class="form-control" id="dob" name="dob" placeholder="Date"> 
+            <input autocomplete="off" type="number" min="1" max="12" class="form-control" id="mob" name="mob" placeholder="Month"> 
+            <input autocomplete="off" type="number" min="1900" max="2020" class="form-control" id="yob" name="yob" placeholder="Year"> 
+        </div> 
+        <div class = "form-row"> 
+            <label for="wdob">Wedding Anniversary </label>  
+            <input autocomplete="off" type="number" min="1" max="31" class="form-control" id="wdob" name="wdob" placeholder="Date"> 
+            <input autocomplete="off" type="number" min="1" max="12" class="form-control" id="wmob" name="wmob" placeholder="Month"> 
+            <input autocomplete="off" type="number" min="1900" max="2020" class="form-control" id="wyob" name="wyob" placeholder="Year"> 
+        </div> 
+        <label for="bdgp">Blood Group</label> 
+        <div> 
+            <select class="custom-select" id="bdgp" name="bdgp"> 
+                <option value="O +ve" selected>O +ve</option> 
+                <option value="A +ve">A +ve</option> 
+                <option value="B +ve">B +ve</option> 
+                <option value="AB +ve">AB +ve</option> 
+                <option value="O -ve">O -ve</option> 
+                <option value="A -ve">A -ve</option> 
+                <option value="B -ve">B -ve</option> 
+                <option value="AB -ve">AB -ve</option> 
+            </select> 
+        </div> 
+        <label for="occp">Occupation</label> 
+        <input autocomplete="off" type="text" class="form-control" id="occp" name="occp"> 
+        <label for="conno">Contact No.</label> 
+        <input autocomplete="off" type="number" minlength="10" min="1000000000" maxlength="10" name="conno" class="form-control" id="conno"> 
+        <br> 
+        <button class="btn btn-primary" type="submit">Add</button> 
+    </form> 
+{% endblock %} 
