@@ -1,0 +1,14 @@
+{% extends "layouta.html" %} 
+
+{% block title %} 
+  Edit 
+{% endblock %} 
+
+{% block main %} 
+    {% for row in rows %} 
+    <form action='/editor/{{ row["MemberID"] }}/{{ row["RegnNo"] }}/{{ row["FamilyName"] }}/{{ row["NativeDiocese"] }}/{{ row["NativeParish"] }}/{{ row["Unit"] }}/{{ row["MumbaiAddress"] }}/{{ row["KeralaAddress"] }}/{{ row["Password"] }}' method="GET"> 
+        <button type="submit" class="btn btn-primary btn-lg btn-block">{{ row["Name"] }}</button> 
+        <br> 
+    </form>
+    {% endfor %} 
+{% endblock %}
