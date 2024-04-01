@@ -1,0 +1,37 @@
+{% extends "layoutm.html" %} 
+ 
+{% block title %} 
+    Directory 
+{% endblock %} 
+ 
+{% block main %} 
+    <table class="table table-striped"> 
+        <thead> 
+            <tr> 
+                <th>Registration No</th> 
+                <th>Name of Head</th> 
+                <th>Unit</th> 
+                <th>Family Name</th> 
+                <th>Address</th> 
+                <th>Action</th> 
+            </tr> 
+        </thead> 
+ 
+        <tbody> 
+            {% for row in rows %} 
+                <tr> 
+                    <td>{{ row["RegnNo"] }}</td> 
+                    <td>{{ row["Name"] }}</td> 
+                    <td>{{ row["Unit"] }}</td> 
+                    <td>{{ row["FamilyName"] }}</td> 
+                    <td>{{ row["MumbaiAddress"] }}</td> 
+                    <td> 
+                        <form action='/portfoliom/{{ row["RegnNo"] }}' method="GET"> 
+                            <button class="btn btn-outline-primary" type="submit">View</button> 
+                        </form> 
+                    </td> 
+                </tr> 
+            {% endfor %} 
+        </tbody> 
+    </table> 
+{% endblock %} 
