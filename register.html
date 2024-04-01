@@ -1,0 +1,99 @@
+{% extends "layouta.html" %} 
+ 
+{% block title %} 
+    Register 
+{% endblock %} 
+ 
+{% block main %} 
+    <form action="/register" method="post"> 
+        <div class="form-group"> 
+            <label for="regnno">Registration No.</label> 
+            <input autocomplete="off" autofocus class="form-control" id="regnno" name="regnno" type="number" min="0" max="300"/> 
+        </div> 
+        <div class="form-row"> 
+            <div class="form-group col-md-6"> 
+                <label for="fname">First Name</label> 
+                <input autocomplete="off" type="text" class="form-control" id="fname" name="fname"> 
+            </div> 
+            <div class="form-group col-md-6"> 
+                <label for="lname">Last Name</label> 
+                <input autocomplete="off" type="text" class="form-control" id="lname" name="lname"> 
+            </div> 
+        </div> 
+        <div class="form-row"> 
+            <div class="form-group col-md-6"> 
+                <label for="password">Password</label> 
+                <input autocomplete="off" type="password" class="form-control" id="password" name="password"> 
+            </div> 
+            <div class="form-group col-md-6"> 
+                <label for="cpassword">Confirm Password</label> 
+                <input autocomplete="off" type="password" class="form-control" id="cpassword" name="cpassword"> 
+            </div> 
+        </div> 
+        <div class="form-group"> 
+            <label for="maddress">Mumbai Address</label> 
+            <input autocomplete="off" type="text" class="form-control" id="maddress" name="maddress"> 
+        </div> 
+        <div class="form-group"> 
+            <label for="kaddress">Kerala Address</label> 
+            <input autocomplete="off" type="text" class="form-control" id="kaddress" name="kaddress"> 
+        </div> 
+        <div class="form-row"> 
+            <div class="form-group col-md-6"> 
+                <label for="famname">Family Name</label> 
+                <input autocomplete="off" type="text" class="form-control" id="famname" name="famname"> 
+            </div> 
+            <div class="form-group col-md-6"> 
+                <label for="unit">Unit</label> 
+                <input autocomplete="off" type="text" class="form-control" id="unit" name="unit"> 
+            </div> 
+        </div> 
+        <div class="form-row"> 
+            <div class="form-group col-md-6"> 
+                <label for="nadi">Native Diocese</label> 
+                <input autocomplete="off" type="text" class="form-control" id="nadi" name="nadi"> 
+            </div> 
+            <div class="form-group col-md-6"> 
+                <label for="napa">Native Parish</label> 
+                <input autocomplete="off" type="text" class="form-control" id="napa" name="napa"> 
+            </div> 
+        </div> 
+        <div class="form-row"> 
+            <label for="dob">Date of Birth</label> 
+            <input autocomplete="off" type="number" min="1" max="31" class="form-control" id="dob" name="dob" placeholder="Date"> 
+            <input autocomplete="off" type="number" min="1" max="12" class="form-control" id="mob" name="mob" placeholder="Month"> 
+            <input autocomplete="off" type="number" min="1900" max="2020" class="form-control" id="yob" name="yob" placeholder="Year"> 
+        </div> 
+        <div class = "form-row"> 
+            <label for="wdob">Wedding Anniversary</label> 
+            <input autocomplete="off" type="number" min="1" max="31" class="form-control" id="wdob" name="wdob" placeholder="Date"> 
+            <input autocomplete="off" type="number" min="1" max="12" class="form-control" id="wmob" name="wmob" placeholder="Month"> 
+            <input autocomplete="off" type="number" min="1900" max="2020" class="form-control" id="wyob" name="wyob" placeholder="Year"> 
+        </div> 
+        <div class="form-row"> 
+            <div class="form-group col-md-6"> 
+                <label for="bdgp">Blood Group</label> 
+                <div> 
+                    <select class="custom-select" id="bdgp" name="bdgp"> 
+                        <option value="O +ve" selected>O +ve</option> 
+                        <option value="A +ve">A +ve</option> 
+                        <option value="B +ve">B +ve</option> 
+                        <option value="AB +ve">AB +ve</option> 
+                        <option value="O -ve">O -ve</option> 
+                        <option value="A -ve">A -ve</option> 
+                        <option value="B -ve">B -ve</option> 
+                        <option value="AB -ve">AB -ve</option> 
+                    </select> 
+                </div> 
+            </div> 
+            <div class="form-group col-md-6"> 
+                <label for="occp">Occupation</label> 
+                <input autocomplete="off" type="text" class="form-control" id="occp" name="occp"> 
+            </div> 
+        </div> 
+        <label for="conno">Contact No.</label> 
+        <input autocomplete="off" type="number" minlength="10" min="1000000000" maxlength="10" name="conno" class="form-control" id="conno"> 
+        <br> 
+        <button class="btn btn-primary" type="submit">Register</button> 
+    </form> 
+{% endblock %} 
