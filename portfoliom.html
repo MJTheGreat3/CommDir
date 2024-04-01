@@ -1,0 +1,81 @@
+{% extends "layoutm.html" %} 
+ 
+{% block title %} 
+    Portfolio 
+{% endblock %} 
+ 
+{% block main %} 
+    <h1 id="comicsanso"> 
+        Portfolio 
+    </h1> 
+    <br> 
+    <table class="table table-bordered" id="comicsanst"> 
+            <tr> 
+                <th colspan="3" id="special">{{ rows[0]["Name"] }}</th> 
+                <th>Unit</th> 
+                <td>{{ rows[0]["Unit"] }}</td> 
+            </tr> 
+            <tr> 
+                <th>Family</th> 
+                <td colspan="2">{{ rows[0]["FamilyName"] }}</td> 
+                <th>Regn. No.</th> 
+                <td>{{ rows[0]["RegnNo"] }}</td> 
+            </tr> 
+            <tr> 
+                <th colspan="3">Mumbai Address</th> 
+                <th colspan="2">Kerala Address</th> 
+            </tr> 
+            <tr> 
+62 | Page 
+ 
+                <td colspan="3">{{ rows[0]["MumbaiAddress"] }}</td> 
+                <td colspan="2">{{ rows[0]["KeralaAddress"] }}</td> 
+            </tr> 
+            <tr> 
+                <th colspan="3">Native Diocese</th> 
+                <th colspan="2">Native Parish</th> 
+            </tr> 
+            <tr> 
+                <td colspan="3" rowspan="6">{{ rows[0]["NativeDiocese"] }}</td> 
+                <td colspan="2" rowspan="6">{{ rows[0]["NativeParish"] }}</td> 
+            </tr> 
+    </table> 
+    <br> 
+    <p> 
+        <button class="btn btn-outline-success" type="button" data-toggle="collapse" datatarget="#cllp" aria-expanded="false" aria-controls="collapseExample"> 
+            Family Members 
+        </button> 
+    </p> 
+    <div class="collapse" id="cllp"> 
+        <div class="table-responsive" id="comicsansh"> 
+            <table class="table table-striped"> 
+                <thead class="thead-dark"> 
+                    <tr> 
+                        <th>Member ID</th> 
+                        <th>Name</th> 
+                        <th>Date of Birth</th> 
+                        <th>Relation</th> 
+                        <th>Wedding Anniversary</th> 
+                        <th>Blood Group</th> 
+                        <th>Contact No</th> 
+                        <th>Occupation</th> 
+                    </tr> 
+                </thead> 
+                <tbody> 
+                    {% for row in rows %} 
+                        <tr> 
+                            <td>{{ row["MemberID"] }}</td> 
+                            <td>{{ row["Name"] }}</td> 
+                            <td>{{ row["DateofBirth"] }}</td> 
+                            <td>{{ row["Relation"] }}</td> 
+                            <td>{{ row["WeddingAnniversary"] }}</td> 
+                            <td>{{ row["BloodGroup"] }}</td> 
+                            <td>{{ row["ContactNo"] }}</td> 
+                            <td>{{ row["Occupation"] }}</td> 
+                        </tr> 
+                    {% endfor %} 
+                </tbody> 
+            </table> 
+        </div> 
+    </div> 
+{% endblock %}
