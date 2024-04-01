@@ -1,0 +1,15 @@
+{% extends "layouta.html" %} 
+ 
+{% block title %} 
+    Deactivation 
+{% endblock %} 
+ 
+{% block main %} 
+ 
+    <form action="/deactivate/{{ row[0]['MemberID'] }}/{{ row[0]['RegnNo'] }}/{{ row[0]['FamilyName'] }}/{{ row[0]['NativeDiocese'] }}/{{ row[0]['NativeParish'] }}/{{ row[0]['Unit'] }}/{{ row[0]['MumbaiAddress'] }}/{{ row[0]['KeralaAddress'] }}/{{ row[0]['Password'] }}" method="POST"> 
+        <input autocomplete="off" type="text" class="form-control" name="comment" placeholder="Reason"> 
+        <br> 
+        <button type="submit" class="btn btn-danger">Deactivate</button> 
+    </form> 
+ 
+{% endblock %} 
